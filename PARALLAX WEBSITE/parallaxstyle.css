@@ -1,0 +1,92 @@
+html{
+    box-sizing: border-box;
+
+}
+*,*::after , *,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.first-image{
+    background-image: url(c1.png);
+    min-height: 500px;
+    opacity: 0.88; 
+
+}
+.second-image{
+    background-image: url(c4.png);
+    min-height: 500px;
+
+    
+}
+
+.third-image{
+    background-image: url(c3.png);
+    min-height: 500px;
+
+
+
+}
+
+.fourth-image{
+ background-image: url(c400.png);
+    min-height: 500px;
+    opacity: 0.88; 
+
+
+}
+
+.first-image , .second-image , .third-image ,.fourth-image{
+   background-attachment: fixed;
+   
+
+}
+
+section{
+    text-align : center;
+    padding:3rem 5rem;
+}
+
+.section-light{
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #0f0f0f;
+}
+.section-dark{
+    text-align: center;
+    background-color: #282e34;
+    color: #ddd;
+     
+}
+
+.image div{
+    /* display: flex;
+    justify-content: center;
+    align-items: center ; */
+
+    position: relative;
+}
+
+.image div{
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          color: white;
+          font-size: 50px;
+          letter-spacing: 25px;
+          text-transform: uppercase;
+
+}
+
+.first-image div{
+    color: white;
+    background-color:#111;
+    padding: 20px;
+
+
+}
