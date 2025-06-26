@@ -1,0 +1,159 @@
+/* Basic Reset and Theme */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+:root {
+  --dk-violet: hsl(268, 75%, 9%);
+  --lt-violet: hsl(268, 47%, 21%);
+  --lt-violet2: hsl(281, 89%, 26%);
+  --vb-violet: hsl(285, 91%, 52%);
+  --vb-yellow: hsl(52, 100%, 62%);
+  --pl-white: hsl(0, 0%, 100%);
+  --vb-cyan: hsl(176, 100%, 44%);
+  --dk-text: hsl(198, 20%, 13%);
+}
+
+#wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    231deg,
+    rgba(22, 6, 40, 1),
+    rgba(52, 28, 79, 1),
+    rgba(88, 7, 125, 1)
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 20s ease infinite;
+  z-index: 1;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+  z-index: 2;
+  position: relative;
+}
+
+.heading {
+  color: var(--pl-white);
+  opacity: 0.75;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* UI Elements */
+.displayContainer {
+  position: relative;
+  background-color: var(--dk-violet);
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid var(--lt-violet2);
+  margin: 1rem 0;
+}
+
+.displayContainer input {
+  width: 100%;
+  background-color: transparent;
+  padding: 1.15rem 1rem;
+  color: var(--vb-yellow);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-right: 3.25rem;
+  border: none;
+  outline: none;
+}
+
+.copyBtn {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.inputContainer {
+  background-color: var(--dk-violet);
+  border-radius: 1rem;
+  border-bottom: 0.35rem solid var(--lt-violet2);
+  padding: 2rem;
+}
+
+.lengthContainer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--pl-white);
+  font-size: 1.5rem;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  height: 0.75rem;
+  border-radius: 1rem;
+  background: var(--lt-violet);
+  cursor: pointer;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--pl-white);
+  font-size: 1.25rem;
+}
+
+.strengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.75rem 0 2rem;
+}
+
+.indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+#generateBtn {
+  background: var(--vb-violet);
+  padding: 1rem;
+  width: 100%;
+  color: var(--vb-yellow);
+  font-weight: 600;
+  font-size: 1.25rem;
+  border-radius: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* 🌌 Canvas Background */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
